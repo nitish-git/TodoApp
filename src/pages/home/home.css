@@ -1,0 +1,42 @@
+.home {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.home-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.home-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.call-to-action {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    width: 80px;
+}
+
+.signup {
+    background-color: #1976d2;
+}
+
+.login {
+
+    background-color: gray;
+}

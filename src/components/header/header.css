@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #1976d2;
+
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 5px
+}
+
+.app-logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+.header-right-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.header-right-link {
+    cursor: pointer;
+    font-size: 1.15rem;
+    padding: 0.25rem;
+}
+
+.header-right-link:hover {
+    background-color: #3a8fe4;
+}

@@ -1,11 +1,14 @@
 import React from 'react'
+import './dashboardlayout.css'
 import Header from '../../components/header/Header'
 
 function DashboardLayout({ children }) {
     return (
-        <div>
+        <div className='dashboard-container'>
             <Header />
-            {children}
+            <div className='main-content-area'>
+                {children}
+            </div>
         </div>
     )
 }

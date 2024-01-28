@@ -32,7 +32,7 @@ function EditTask({ task, onClose }) {
                         </div>
                         <div className='edit-task-modal-actions'>
                             <button className='edit-task-modal-action cancle' onClick={onClose}>Cancle</button>
-                            <button className='edit-task-modal-action create' type="submit">Create</button>
+                            <button className='edit-task-modal-action create' type="submit">Modify</button>
                         </div>
                     </form>
                 </div>

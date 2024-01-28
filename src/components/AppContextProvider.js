@@ -11,7 +11,6 @@ function AppContextProvider({ children }) {
         if (localStorage.getItem("TODO_APP_BY_NITISH") === null) {
             localStorage.setItem("TODO_APP_BY_NITISH", JSON.stringify(app))
         } else {
-            console.log("refreshed")
             dispatch({ type: "SYNC_LOCAL_STATE", payload: "TODO_APP_BY_NITISH" })
         }
     }, [])

@@ -2,6 +2,25 @@
 
 This project provides the functionality of simple Todo application.
 
+- Signup
+- Login
+- Add Task
+- View Task
+- Edit Task
+- Delete Task
+
+## Image Refrence
+![home](./public/assets/1.png)
+![signup](./public/assets/2.png)
+![Signup-success](./public/assets/3.png)
+![Login](./public/assets/4.png)
+![Login-success](./public/assets/5.png)
+![Add-task](./public/assets/6.png)
+![Dashboard](./public/assets/7.png)
+![View-task](./public/assets/8.png)
+![Edit-task](./public/assets/9.png)
+![Signup](./public/assets/10.png)
+
 ## Available Scripts
 
 In the project directory, you can run:

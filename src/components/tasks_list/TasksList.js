@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import './taskslist.css'
 import TaskItem from '../task_item/TaskItem'
 
@@ -18,4 +18,4 @@ function TasksList({ tasks }) {
     )
 }
 
-export default TasksList
+export default memo(TasksList)

@@ -3,13 +3,21 @@ import './dashboard.css'
 import DashboardLayout from '../../layouts/dashboard/DashboardLayout'
 import TasksList from '../../components/tasks_list/TasksList'
 import { useApp } from '../../hooks/appLevelHooks'
+import NotFound from '../404/NotFound'
 
 function Dashboard() {
-    const { tasks } = useApp()
+    const app = useApp()
+    const tasks = app.tasks.filter(task => task.user === app.logged_in_user)
     return (
-        <DashboardLayout>
-            <TasksList tasks={tasks} />
-        </DashboardLayout>
+        <>
+            {app.logged_in_user &&
+
+                <DashboardLayout>
+                    <TasksList tasks={tasks} />
+                </DashboardLayout>
+            }
+            {!app.logged_in_user && <NotFound />}
+        </>
     )
 }
 

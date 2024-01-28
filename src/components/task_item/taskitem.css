@@ -19,8 +19,17 @@
     outline: none;
     border: none;
     width: 80px;
+    margin-left: 5px;
 }
 
 .view {
     background-color: #1976d2;
+}
+
+.edit {
+    background-color: gray;
+}
+
+.delete {
+    background-color: #d21922;
 }

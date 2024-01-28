@@ -1,0 +1,81 @@
+.edit-task-modal-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-task-modal {
+    max-width: 100vw;
+    min-width: 480px;
+    max-height: 80vh;
+    background: whitesmoke;
+    border: 2px solid rgb(124, 171, 202);
+    border-radius: 5px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-task-modal-title {
+    color: grey;
+}
+
+.edit-task-form-input-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-task-form input {
+    height: 25px;
+    padding: 5px;
+    font-size: 1.15rem;
+    border-radius: 5px;
+}
+
+.edit-task-form input:focus {
+    outline: none;
+}
+
+.edit-task-form textarea {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.15rem;
+}
+
+.edit-task-form textarea:focus {
+    outline: none;
+}
+
+.edit-task-modal-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px
+}
+
+.edit-task-modal-action {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    width: 80px;
+}
+
+.cancle {
+    background-color: #d21922;
+}
+
+.create {
+    background-color: #1976d2;
+}

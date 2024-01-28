@@ -2,15 +2,23 @@ import React, { useState } from 'react'
 import './header.css'
 import { useNavigate } from 'react-router-dom'
 import AddTask from '../add_task/AddTask'
-import { useApp } from "../../hooks/appLevelHooks"
+import { useApp, useAppDispatch } from "../../hooks/appLevelHooks"
 
 function Header(props) {
     const app = useApp()
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
     const [openAddTask, setOpenAddTask] = useState(false)
+
+    function handleLogout() {
+        dispatch({ type: "LOGOUT_USER" })
+        navigate("/logout")
+    }
+
     function onCancle() {
         setOpenAddTask(false)
     }
-    const navigate = useNavigate()
+
     return (
         <>
             {openAddTask && <AddTask onCancle={onCancle} />}
@@ -19,10 +27,11 @@ function Header(props) {
                     <div className='app-logo' onClick={() => navigate('/')}>Todo App</div>
                 </div>
                 <div className='header-right'>
+                    {app?.logged_in_user && <p>Hi, {app.logged_in_user}</p>}
                     <ul className='header-right-links'>
-                        {app.user_logged_in && <li className='header-right-link' onClick={() => setOpenAddTask(true)}>Add</li>}
-                        {!app.user_logged_in && <li className='header-right-link' onClick={() => navigate('/login')}>Login</li>}
-                        {app.user_logged_in && <li className='header-right-link' onClick={() => navigate('/logout')}>Logout</li>}
+                        {app?.logged_in_user && <li className='header-right-link' onClick={() => setOpenAddTask(true)}>Add</li>}
+                        {!app?.logged_in_user && <li className='header-right-link' onClick={() => navigate('/login')}>Login</li>}
+                        {app?.logged_in_user && <li className='header-right-link' onClick={handleLogout}>Logout</li>}
                     </ul>
                 </div>
             </header>

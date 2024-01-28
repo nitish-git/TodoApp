@@ -6,7 +6,6 @@ import { useApp } from '../../hooks/appLevelHooks'
 function Home() {
     const app = useApp()
     const navigate = useNavigate()
-    useEffect(() => app.logged_in_user ? navigate("/dashboard") : null)
     return (
         <DashboardLayout>
             <div className='home'>

@@ -1,7 +1,6 @@
 import React from 'react'
 import './notfound.css'
 import DashboardLayout from '../../layouts/dashboard/DashboardLayout'
-import { Link } from 'react-router-dom'
 
 function NotFound() {
   return (

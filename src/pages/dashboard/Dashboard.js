@@ -16,7 +16,7 @@ function Dashboard() {
                     <TasksList tasks={tasks} />
                 </DashboardLayout>
             }
-            {logged_in_user && <NotFound />}
+            {!logged_in_user && <NotFound />}
         </>
     )
 }

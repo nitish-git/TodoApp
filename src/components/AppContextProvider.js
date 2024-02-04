@@ -13,7 +13,7 @@ function AppContextProvider({ children }) {
         } else {
             dispatch({ type: "SYNC_LOCAL_STATE", payload: "TODO_APP_BY_NITISH" })
         }
-    }, [])
+    }, [app])
 
     useEffect(() => {
 

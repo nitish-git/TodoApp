@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './home.css'
 import DashboardLayout from '../../layouts/dashboard/DashboardLayout'
 import { useNavigate } from 'react-router-dom'
-import { useApp } from '../../hooks/appLevelHooks'
 function Home() {
-    const app = useApp()
     const navigate = useNavigate()
     return (
         <DashboardLayout>

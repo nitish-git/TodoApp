@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import './dashboard.css'
 import DashboardLayout from '../../layouts/dashboard/DashboardLayout'
 import TasksList from '../../components/tasks_list/TasksList'
